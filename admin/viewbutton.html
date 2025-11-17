@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Open New Page</title>
+</head>
+<body>
+
+<button id="viewButton">View Document</button>
+
+<script>
+  const viewButton = document.getElementById('viewButton');
+
+  viewButton.addEventListener('click', function(event) {
+    // Prevent the default link behavior (if it was an <a> tag)
+    event.preventDefault(); // Important: Stop the download
+
+    // Open a new blank page
+    window.open('', '_blank'); // _blank opens in a new tab/window
+
+    // If you want to put content into the new page immediately:
+    // const newWindow = window.open('', '_blank');
+    // newWindow.document.write("<h1>New Page Content</h1>");
+    // newWindow.document.close();
+
+  });
+
+
+</script>
+
+</body>
+</html>
